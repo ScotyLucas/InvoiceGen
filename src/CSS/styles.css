@@ -1,0 +1,45 @@
+.Main{
+    display: flex;
+}
+
+.Navbar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Logo, .Logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.BackGround {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+}
+
+.grey-back{
+    background-color: rgba(80, 80, 80, 1);
+    width: 100%;
+    height: 50px;
+}
+
+.Welcome{
+    display: flex;
+    /* margin-top: 30px; */
+    justify-content: center;
+    align-items: center;
+}
