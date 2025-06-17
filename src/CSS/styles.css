@@ -55,7 +55,7 @@ html, body {
 }
 
 .white-line {
-  width: 2000px;
+  width: 100vh;
   height: 2px;
   background-color: white;
   margin: 20px 0;

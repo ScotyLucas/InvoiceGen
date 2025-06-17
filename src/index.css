@@ -26,14 +26,21 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
-.welcome h1 {
+.welcome {
   display: flex;
   align-items: center;
-  justify-content: center;
+  margin-top: 20px;
+}
+
+.invoice-content{
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column;
 }
 
 button {

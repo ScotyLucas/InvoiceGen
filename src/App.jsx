@@ -4,6 +4,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Navbar from './components/Navbar.jsx'
 import './CSS/styles.css'
+import './index.css'
 import Background from './components/Background.jsx'
 import Welcome from './components/Welcome.jsx'
 import DisplayPage from './components/Invoices.jsx'
@@ -77,7 +78,6 @@ const [userName, setUserName] = useState("Welcome, Demo User")
   />
   </div>
 </div>
-<div className='content'>
   <div className='welcome'>
     <h1>
       <Welcome
@@ -90,16 +90,19 @@ const [userName, setUserName] = useState("Welcome, Demo User")
     <div className='ads'>
     </div>
   </div>
+  <div className="invoice-content">
   <div className='Invoice'>
     <h2>
       Your Invoices
     </h2>
   </div>
-  {/* <HorizontalLine /> */}
+  </div>
+  <HorizontalLine />
+  <div className="invoice-content">
   <div className='Invoices'>
     <DisplayPage />
   </div>
-</div>
+  </div>
 </div>
 
   )
