@@ -5,6 +5,8 @@ import Navbar from './components/Navbar.jsx'
 import './CSS/styles.css'
 import Background from './components/Background.jsx'
 import Welcome from './components/Welcome.jsx'
+import DisplayPage from './components/Invoices.jsx'
+import HorizontalLine from './components/HorizontalLine.jsx'
 function App() {
 
 
@@ -77,16 +79,29 @@ const [userName, setUserName] = useState("Welcome, Demo User")
   />
   </div>
 </div>
-
-  <div className="welcome">
-    <h1><Welcome
+<div className='content'>
+  <div className='welcome'>
+    <h1>
+      <Welcome
       text={userName}
       delay={150}
       animateBy="words"
       direction="top"
       className="text-2xl mb-8"
     /></h1>
+    <div className='ads'>
+    </div>
   </div>
+  <div className='Invoice'>
+    <h2>
+      Your Invoices
+    </h2>
+  </div>
+  <HorizontalLine />
+  <div className='Invoices'>
+    <DisplayPage />
+  </div>
+</div>
 </div>
 
   )
