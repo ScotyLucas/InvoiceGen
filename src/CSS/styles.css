@@ -1,5 +1,15 @@
-.Main{
-    display: flex;
+
+.Main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh; /* fontos */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 .Navbar {
@@ -37,9 +47,9 @@
     height: 50px;
 }
 
-.Welcome{
-    display: flex;
-    /* margin-top: 30px; */
-    justify-content: center;
-    align-items: center;
+.welcome {
+  display: flex;
+  margin-top: 80px;
+  justify-content: center;
+  text-align: center;
 }
