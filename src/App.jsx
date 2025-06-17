@@ -97,7 +97,7 @@ const [userName, setUserName] = useState("Welcome, Demo User")
       Your Invoices
     </h2>
   </div>
-  <HorizontalLine />
+  {/* <HorizontalLine /> */}
   <div className='Invoices'>
     <DisplayPage />
   </div>

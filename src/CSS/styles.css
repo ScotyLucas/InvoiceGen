@@ -53,3 +53,22 @@ html, body {
     justify-content: center;
     align-items: center;
 }
+
+.white-line {
+  width: 2000px;
+  height: 2px;
+  background-color: white;
+  margin: 20px 0;
+}
+
+.Invoice {
+  margin-left: 20px;
+}
+
+.Invoices{
+  margin-left: 20px;
+  margin-top: 30px;
+  border: 1px solid white;
+  width: fit-content;
+
+}

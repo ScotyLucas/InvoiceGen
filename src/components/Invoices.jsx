@@ -17,13 +17,13 @@ const DisplayPage = () => {
       ) : (
         <ul>
           {dataList.map((data, index) => (
-            // <li key={index} style={{ marginBottom: '1rem', borderBottom: '1px solid #ccc' }}>
-            //   <p><strong>Név:</strong> {data.name}</p>
-            //   <p><strong>Address:</strong> {data.email}</p>
-            //   <p><strong>Tax Number:</strong> {data.age}</p>
-            //   <p><strong>Phone Number:</strong> {data.city}</p>
-            //   <p><strong>Email Address:</strong> {data.note}</p>
-            // </li>
+            <li key={index} style={{ marginBottom: '1rem', borderBottom: '1px solid #ccc' }}>
+           <p><strong>Név:</strong> {data.name}</p>
+            <p><strong>Address:</strong> {data.email}</p>
+             <p><strong>Tax Number:</strong> {data.age}</p>
+            <p><strong>Phone Number:</strong> {data.city}</p>
+             <p><strong>Email Address:</strong> {data.note}</p>
+            </li>
           ))}
         </ul>
       )}
