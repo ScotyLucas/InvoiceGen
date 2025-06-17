@@ -1,23 +1,25 @@
 import { useState } from 'react'
+import { BrowserRouter, BrowserRouter as Router } from 'react-router-dom';
 import { Routes, Route, Link } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import Navbar2 from './components/Navbar2.jsx'
 import Navbar from './components/Navbar.jsx'
 import './CSS/styles.css'
 import './index.css'
-import Background from './components/Background.jsx'
 import Welcome from './components/Welcome.jsx'
 import DisplayPage from './components/Invoices.jsx'
-import CreateInv from './components/CreateInvoices.jsx'
+import CreateInv from './pages/CreateInvoices.jsx'
 import HorizontalLine from './components/HorizontalLine.jsx'
 function App() {
 
 
-  const items = [
-    { label: "Home", to: "/" },
-    { label: "Create Invoice", to: "./components/CreateInvoices.jsx" },
-    { label: "Contact", to: "/contact" },
-  ];
+const items = [
+  { label: "Home", href: "/", element: <App /> },
+  { label: "Create Invoice", href: "/create-invoice", element: <CreateInv /> },
+  { label: "Support", href: "/", element: <div>Support oldal fejlesztés alatt</div> },
+  { label: "Settings", href: "/", element: <div>Beállítások később jönnek</div> },
+];
 
 const items2 = [
 
@@ -35,12 +37,11 @@ const [userName, setUserName] = useState("Welcome, Demo User")
       Logo
     </div>
   <div className='Nav'>
-  
-  <Navbar
+    <Navbar
 
     items={items}
 
-    particleCount={0}
+    particleCount={15}
 
     particleDistances={[0, 0]}
 
@@ -52,9 +53,11 @@ const [userName, setUserName] = useState("Welcome, Demo User")
 
     timeVariance={300}
 
-    colors={[1, 2, 3, 1, 2, 3, 1, 4]}
-
-  />
+    colors={[1, 2, 3, 1, 2, 3, 1, 4]} />
+      <Routes>
+        <Route path="/home" element={<App />} />
+        <Route path="/create-invoice" element={<CreateInv />} />
+      </Routes>
   </div>
   <div className='Logout'>
     <Navbar

@@ -3,6 +3,7 @@
 }
 
 .gooey-nav-container {
+  margin-top: 3px;
   position: relative;
   display: flex;
   justify-content: flex-start;
