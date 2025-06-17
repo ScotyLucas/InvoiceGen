@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Routes, Route, Link } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import Navbar from './components/Navbar.jsx'
@@ -6,19 +7,16 @@ import './CSS/styles.css'
 import Background from './components/Background.jsx'
 import Welcome from './components/Welcome.jsx'
 import DisplayPage from './components/Invoices.jsx'
+import CreateInv from './components/CreateInvoices.jsx'
 import HorizontalLine from './components/HorizontalLine.jsx'
 function App() {
 
 
-    const items = [
-
-  { label: "Home", href: "#" },
-
-  { label: "About", href: "#" },
-
-  { label: "Contact", href: "#" },
-
-];
+  const items = [
+    { label: "Home", to: "/" },
+    { label: "Create Invoice", to: "./components/CreateInvoices.jsx" },
+    { label: "Contact", to: "/contact" },
+  ];
 
 const items2 = [
 
