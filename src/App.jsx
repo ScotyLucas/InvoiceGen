@@ -4,8 +4,9 @@ import viteLogo from '/vite.svg'
 import Navbar from './components/Navbar.jsx'
 import './CSS/styles.css'
 import Background from './components/Background.jsx'
-
+import Welcome from './components/Welcome.jsx'
 function App() {
+
 
     const items = [
 
@@ -22,6 +23,8 @@ const items2 = [
   { label: "Logout", href: "#" }
 
 ];
+
+const [userName, setUserName] = useState("Welcome, Demo User")
 
 
   return (
@@ -75,9 +78,15 @@ const items2 = [
   </div>
 </div>
 
-    <div className='Welcome'>
-      <h1>Welcome, Demo User</h1>
-    </div>
+  <div className="welcome">
+    <h1><Welcome
+      text={userName}
+      delay={150}
+      animateBy="words"
+      direction="top"
+      className="text-2xl mb-8"
+    /></h1>
+  </div>
 </div>
 
   )
