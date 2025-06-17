@@ -47,51 +47,9 @@ html, body {
     height: 50px;
 }
 
-.welcome {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  flex-flow: column;
-  width: 100%;
-}
-
-.welcome h1 {
-  align-items: center;
-}
-
-.ads{
-  width: 50%;
-  border-radius: 10px;
-}
-
-.content {
-  margin-top: 50px;
-  display: flex;
-  flex-flow: column;
-  align-self: center;
-  justify-self: center;
-  width: 100%;
-}
-
-.Invoice {
-  margin-left: 20px;
-}
-
-.white-line {
-  width: 1470px;
-  height: 2px;
-  background-color: white;
-  margin-top: 5px 0;
-  margin-left: 20px;
-}
-
-.Invoices {
-  margin-top: 20px;
-  margin-left: 28px;
-  width: 1450px;
-  height: fit-content;
-  border: 1px solid white;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
+.Welcome{
+    display: flex;
+    /* margin-top: 30px; */
+    justify-content: center;
+    align-items: center;
 }
