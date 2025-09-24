@@ -20,5 +20,15 @@ export const navitems = {
             to: "/support",
             severity: 'help'
         }
+
+    ],
+    download: [
+        {
+            label: 'Download Invoice (Soon, Do not use)',
+            icon: 'pi pi-receipt',
+            to: "/download-invoice",
+            severity:'info'
+
+        }
     ]
 };

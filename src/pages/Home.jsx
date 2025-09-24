@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { InvoiceContext } from '../context/InvoiceContext'
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
+import Download from '../components/navigation/Download';
 const Home = () => {
 
   const { invoiceItems, deleteInvoice } = useContext(InvoiceContext)
@@ -34,10 +35,7 @@ const Home = () => {
                 onClick={() => deleteInvoice(items.id)}
                 /></div>
               <div className='flex flex-column justify-content-center mt-3'>
-              <Button
-                label="Download Invoice(Soon)"
-                severity="info"
-                /></div>
+              <Download /></div>
           </Card>
         </li>
       ))}
