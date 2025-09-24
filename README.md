@@ -23,3 +23,10 @@ useEffect for always refresh when new data added.
 Prime react for design.
 
 Local Storage for garantee Invoices always stay after refresh.
+
+
+## Future updates
+
+### 1. Adding a working download button,
+
+### 2. Auth system with sql
