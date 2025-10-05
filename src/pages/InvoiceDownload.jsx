@@ -1,39 +1,51 @@
-import React from 'react'
-import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
-import { PDFViewer } from '@react-pdf/renderer';
+import pdfMake from "pdfmake/build/pdfmake";
+import pdfFonts from "pdfmake/build/vfs_fonts.js";
+import Easyinvlogo from "../images/EasyInvoice_logo.png";
 
-// Create styles
-const styles = StyleSheet.create({
-    page: {
-        flexDirection: 'row',
-        backgroundColor: '#E4E4E4'
+pdfMake.vfs = pdfFonts.vfs;
+
+const generatePDF = (invoice) => {
+
+  const total = invoice.quantity * invoice.price
+    
+    if(!invoice) return alert("No invoice with this id")
+
+  const docDefinition = {
+    content: [
+      { text: "Invoice", style: "header" },
+      { text: `Name: ${invoice.firstname} ${invoice.lastname}` },
+      { text: `Address: ${invoice.address}` },
+      { text: `Tax Number: ${invoice.taxnumber}` },
+      { text: " " },
+      {
+        table: {
+          widths: ["*", "auto", "auto"],
+          body: [
+            ["Description", "Quantity", "Price/Quantity (€)"],
+            [
+              invoice.description,
+              invoice.quantity.toString(),
+              invoice.price.toLocaleString("hu-HU"),
+            ],
+            [
+              { text: "Total", colSpan: 2, bold: true },
+              {},
+              `€ ${total}`,
+            ],
+          ],
+        },
+      },
+    ],
+    styles: {
+      header: {
+        fontSize: 20,
+        bold: true,
+        margin: [0, 0, 0, 10],
+      },
     },
-    section: {
-        margin: 10,
-        padding: 10,
-        flexGrow: 1
-    }
-});
+  };
 
-// Create Document Component
-const MyDocument = () => (
-    <Document>
-        <Page size="A4" style={styles.page}>
-            <View style={styles.section}>
-                <Text>Section #1</Text>
-            </View>
-            <View style={styles.section}>
-                <Text>Section #2</Text>
-            </View>
-        </Page>
-    </Document>
-);
-const InvoiceDownload = () => {
-    return (
-        <PDFViewer>
-            <MyDocument />
-        </PDFViewer>
-    )
-}
+  pdfMake.createPdf(docDefinition).download(`invoice_${invoice.id}.pdf`);
+};
 
-export default InvoiceDownload
+export default generatePDF;

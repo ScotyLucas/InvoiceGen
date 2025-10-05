@@ -3,6 +3,9 @@ import { InvoiceContext } from '../context/InvoiceContext'
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
 import Download from '../components/navigation/Download';
+import generatePDF from './InvoiceDownload';
+
+
 const Home = () => {
 
   const { invoiceItems, deleteInvoice } = useContext(InvoiceContext)
@@ -35,7 +38,11 @@ const Home = () => {
                 onClick={() => deleteInvoice(items.id)}
                 /></div>
               <div className='flex flex-column justify-content-center mt-3'>
-              <Download /></div>
+              <Button
+                label="Download Invoice"
+                severity="info"
+                onClick={() => generatePDF(items)}
+                /></div>
           </Card>
         </li>
       ))}
