@@ -12,6 +12,8 @@ const generatePDF = (invoice) => {
 
   const docDefinition = {
     content: [
+      [{text: 'Invoice ID:', style: 'tableHeader'}, {text: '', style: 'tableHeader'}, {text: `${invoice.id}`, style: 'tableHeader'}],
+      
       { text: "Invoice", style: "header" },
       { text: `Name: ${invoice.firstname} ${invoice.lastname}` },
       { text: `Address: ${invoice.address}` },
