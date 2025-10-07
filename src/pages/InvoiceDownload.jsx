@@ -25,9 +25,9 @@ const generatePDF = (invoice) => {
           body: [
             ["Description", "Quantity", "Price/Quantity (€)"],
             [
-              invoice.description,
-              invoice.quantity.toString(),
-              invoice.price.toLocaleString("hu-HU"),
+              `${invoice.description}`,
+              `€${invoice.quantity.toString()}`,
+              `€${invoice.price.toLocaleString("hu-HU")}`,
             ],
             [
               { text: "Total", colSpan: 2, bold: true },
